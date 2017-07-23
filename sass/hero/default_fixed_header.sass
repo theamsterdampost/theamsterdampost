@@ -1,0 +1,97 @@
+header.default_fixed_header
+  position: fixed
+  top: 0
+  right: 0
+  left: 0
+  background: #111111
+  transition: all 300ms ease-in-out
+  transform: translateY(-100%)
+  &.is_visible
+    transform: translateY(0)
+
+  .default_fixed_header_container
+    display: flex
+    max-width: 500px
+    margin: 0 auto
+    justify-content: space-between
+    height: 60px
+    a.fixed_header_logo
+      line-height: 60px
+      height: 60px
+      margin: 0
+      padding: 0
+      display: block
+      color: #FFFFFF
+      text-decoration: none
+      font-weight: 700
+    a.mobile_nav_open
+      display: none
+    nav.fixed_header_navigation
+      height: 60px
+      display: flex
+      justify-content: space-between
+      width: 100%
+      padding-left: 20%
+      a
+        display: block
+        height: 60px
+        line-height: 60px
+        font-size: 14px
+        text-transform: uppercase
+        color: #FFFFFF
+        text-decoration: none
+        outline: none
+        transition: all 300ms ease-in-out
+        &:hover
+          opacity: .5
+
+    @media (max-width: 600px)
+      display: block
+      position: relative
+      max-width: 100%
+      a.fixed_header_logo
+        text-align: center
+        background: #111111
+        z-index: 2
+        position: relative
+        display: inline-block
+        left: 50%
+        transform: translatex(-50%)
+      a.mobile_nav_open
+        display: block
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        color: #FFFFFF
+        font-size: 30px
+        line-height: 1
+        width: 30px
+        height: 30px
+        text-align: center
+        z-index: 3
+        cursor: pointer
+      nav.fixed_header_navigation
+        display: block
+        background: #111111
+        height: auto
+        padding-bottom: 1px
+        width: 100vw
+        padding-left: 0
+        text-align: center
+        z-index: -1
+        transform: translateY(-100%)
+        transition: all 300ms ease-in-out
+        position: relative
+        left: 0
+        margin-left: 0
+        padding-left: 0
+        margin-right: 0
+        right: 0
+        &.is_visible
+          transform: translateY(0)
+        a
+          display: block
+          height: auto
+          line-height: 1
+          margin-bottom: 20px

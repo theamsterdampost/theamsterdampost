@@ -1,0 +1,113 @@
+section.issues_hero
+  background:
+    image: url(/images/issues_hero.jpg)
+    size: cover
+    position: center top
+
+  header.default_header
+    padding: 0 40px
+      top: 30px
+    text-align: center
+    max-width: 500px
+    margin: 0 auto
+    a.mobile_nav_open
+      display: none
+    nav.header_navigation
+      display: flex
+      justify-content: space-between
+      text-transform: uppercase
+      a
+        color: #111111
+        text-decoration: none
+        outline: none
+        transition: all 300ms ease-in-out
+        &.special_link
+          border-bottom: 1.5px solid #111111
+        &:hover
+          opacity: .5
+
+    @media (max-width: 600px)
+      padding: 0
+        top: 20px
+        bottom: 30px
+      max-width: 100%
+      a.mobile_nav_open
+        display: inline-block
+        text-align: right
+        width: 30px
+        font-size: 30px
+        color: #111111
+        padding-right: 40px
+        outline: none
+        text-decoration: none
+        transition: all 300ms ease-in-out
+        -webkit-tap-highlight-color: transparent
+        position: absolute
+        right: 0
+        z-index: 3
+      nav.header_navigation
+        display: block
+        position: absolute
+        top: 0
+        width: 100%
+        z-index: 2
+        background: #FFFFFF
+        padding: 20px 40px
+          top: 32px
+        box-sizing: border-box
+        opacity: 0
+        pointer-events: none
+        transition: all 300ms ease-in-out
+        &.is_visible
+          pointer-events: auto
+          opacity: 1
+        a
+          display: block
+          margin-bottom: 10px
+          &:last-child
+            display: inline-block
+            margin-bottom: 0
+
+  .logo_section
+    text-align: center
+    margin-top: 7vh
+    padding: 0 40px
+    .main_logo
+      display: block
+      max-width: 500px
+      margin: 0 auto
+    .main_logo img
+      display: block
+      width: 100%
+      max-width: 500px
+      margin: 0 auto
+      transition: all 300ms ease-in-out
+    .main_logo:hover img
+      opacity: .5
+    .main_tagline
+      font-size: 18px
+      text-transform: uppercase
+      letter-spacing: 1px
+
+  .download_cta_section
+    display: block
+    margin-top: 10vh
+    text-align: center
+    padding-bottom: 7vh
+    a.hero_cta
+      display: inline-block
+      text-transform: uppercase
+      text-decoration: none
+      color: #111111
+      font-weight: 700
+      font-size: 14px
+      padding: 12px 30px
+      border: 3px solid #111111
+      background: transparent
+      color: #111111
+      line-height: 1
+      outline: none
+      transition: all 300ms ease-in-out
+      &:hover
+        background: #111111
+        color: #FFFFFF

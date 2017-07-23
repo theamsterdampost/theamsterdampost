@@ -1,0 +1,17 @@
+section.full_screen_overlay
+  
+section.modal_wrap
+  section.default_sign_up_modal
+    a.modal_close_btn(href="/close-sign-up-modal")
+      i.ion-close
+    header.modal_header
+      h3.modal_title Sign up to the greatest travel tips, destinations and foreign food.
+      p.modal_subtitle Get updates, tips, recepies and more. Always for free. Always in your inbox.
+    section.modal_form_section
+    
+      // begin form
+      form(action="//twitter.us16.list-manage.com/subscribe/post?u=a60b729bc4a1f82942c81c179&amp;id=6fd880175f", method="POST", target="_blank")
+        .input_group
+          input(type="email", name="EMAIL", placeholder="Your Email Adress")
+          input(type="text", value="", name="FNAME", placeholder="Your First Name")
+        input(type="submit", name="subscribe", value="Subscribe")

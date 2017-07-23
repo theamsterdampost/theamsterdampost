@@ -1,0 +1,73 @@
+doctype html
+html(lang="en")
+  head
+    // metas
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    meta(name="apple-mobile-web-app-title", content="A'dam Post")
+    
+    // links
+    link(rel="stylesheet", href="/css/normalize.css")
+    link(rel="stylesheet", href="/css/fonts.css")
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
+    
+    // title
+    title Amsterdam Post - A Travel Magazine
+    
+    // favicons
+    link(rel="apple-touch-icon", sizes="180x180", href="/images/logos/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/images/logos/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/images/logos/favicons/favicon-16x16.png")
+    link(rel="manifest", href="/images/logos/favicons/manifest.json")
+    link(rel="mask-icon", href="/images/logos/favicons/safari-pinned-tab.svg", color="#21a1e1")
+    link(rel="shortcut icon", href="/images/logos/favicons/favicon.ico")
+    meta(name="msapplication-config", content="/images/logos/favicons/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+    
+  body.default_body
+    
+    // hero
+    include ./includes/hero.pug
+    
+    // issues section
+    section.home_issues
+      
+      article.introduction#introduction
+        h3.introduction_title Introduction
+        p.introduction_blurb Hi! We are The Amsterdam Post. We are travel blog/magazine. You can sign up for the greatest travel tips, destinations, and foreign food!
+        a.introduction_cta(href="/sign-up-modal") Sign Up Now
+        
+      section.home_magazines#issues
+        
+        article.magazine
+          .poster_view
+            img(src="/images/article_posters/article_london_01_poster.png")
+          .magazine_description
+            h3.description_title Issue 01 - London
+            p.description London is a great destination for almost everybody. With great restaurants, awesome shops, huge parks and lovely architecture, it’s almost the perfect spot for a city-trip. In this issue of The Amsterdam Post, you’ll explore the best hotels, great restaurants, the city highlights and some cool stores you’ve never heard about London before.
+            a.description_cta(href="/issues/issue-01-london/") Download now
+            
+    // social section
+    section.home_social#social
+      h3.social_title Get Social
+      p.social_blurb Follow us on the social media, please. We have accounts all over the web, but our most active account is Twitter. So make sure you check us out on there, and if you like, our other social accounts.
+      .social_icons_group
+        a.social_icon(href="//twitter.com/amsterdam_post", target="_blank"): i.ion-social-twitter
+        a.social_icon(href="//www.instagram.com/theamsterdampost/", target="_blank"): i.ion-social-instagram
+        a.social_icon(href="//www.facebook.com/Amsterdam-Post-1418956868190446/", target="_blank"): i.ion-social-facebook
+        
+    // copyright footer
+    footer.copyright_footer
+      .copyright_footer_wrap
+        span Copyright &copy; The Amsterdam Post. All rights reserved.
+        
+    // sign up modal
+    include ./includes/sign_up_modal.pug
+      
+    // scripts
+    script(type="text/javascript", src="/js/jquery-3.2.1.min.js")
+    script(type="text/javascript", src="/js/app.js")

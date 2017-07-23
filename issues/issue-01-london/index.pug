@@ -1,0 +1,83 @@
+doctype html
+html(lang="en")
+  head
+    // metas
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    meta(charset="utf-8")
+    meta(name="apple-mobile-web-app-capable", content="yes")
+    meta(name="apple-mobile-web-app-status-bar-style", content="black")
+    meta(name="apple-mobile-web-app-title", content="A'dam Post")
+    
+    // links
+    link(rel="stylesheet", href="/css/normalize.css")
+    link(rel="stylesheet", href="/css/fonts.css")
+    link(rel="stylesheet", href="/css/main.css")
+    link(rel="stylesheet", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
+    
+    // title
+    title ‘London’ by The Amsterdam Post
+    
+    // favicons
+    link(rel="apple-touch-icon", sizes="180x180", href="/images/logos/favicons/apple-touch-icon.png")
+    link(rel="icon", type="image/png", sizes="32x32", href="/images/logos/favicons/favicon-32x32.png")
+    link(rel="icon", type="image/png", sizes="16x16", href="/images/logos/favicons/favicon-16x16.png")
+    link(rel="manifest", href="/images/logos/favicons/manifest.json")
+    link(rel="mask-icon", href="/images/logos/favicons/safari-pinned-tab.svg", color="#21a1e1")
+    link(rel="shortcut icon", href="/images/logos/favicons/favicon.ico")
+    meta(name="msapplication-config", content="/images/logos/favicons/browserconfig.xml")
+    meta(name="theme-color", content="#ffffff")
+    
+  body.default_body
+    
+    // hero
+    section.issues_hero(style="background-image: url(/images/heros/london_hero.jpg)", id="top")
+      header.default_header
+        a.mobile_nav_open(href="/open-mobile-navigation"): i.ion-navicon
+        nav.header_navigation
+          a.header_link(href="#introduction") This Issue
+          a.header_link(href="#download") Download
+          a.special_link(href="/sign-up-modal") Subscribe
+          
+      .logo_section
+        a.main_logo(href="/")
+          img(src="/images/logos/issue_logos/london_hero_brand_logo.png")
+          img(src="/images/logos/issue_logos/london_hero_brand_logo.png")
+          img(src="/images/logos/issue_logos/london_hero_brand_logo.png")
+        p.main_tagline The Amsterdam Post - A Travel Magazine
+        
+      .download_cta_section
+        a.hero_cta(href="") Download Now
+        
+    header.default_fixed_header
+      .default_fixed_header_container
+        a.fixed_header_logo(href="/") AmsterdaM
+        a.mobile_nav_open(href="/open-mobile-fixed-navigation"): i.ion-navicon
+        nav.fixed_header_navigation
+          a.header_link(href="#introduction") This Issue
+          a.header_link(href="#download") Download
+          a.special_link(href="/sign-up-modal") Subscribe
+          
+    // issue introduction
+    section.issue_introduction#introduction
+      h3.introduction_title Introduction
+      p.introduction_blurb London is a great destination for almost everybody. With great restaurants, awesome shops, huge parks and lovely architecture, it’s almost the perfect spot for a city-trip. In this issue of The Amsterdam Post, you’ll explore the best hotels, great restaurants, the city highlights and some cool stores you’ve never heard about London before.
+      
+    // download issue
+    section.issue_details#download
+      .issue_wrap
+        h3.issue_title Issue 01 - London
+        p.issue_download_blurb We are still experimenting with our writing, so this issue is free to download for anyone. This issue includes articles about the best food, places to visit and hotels in London. When you click the download button, a PDF file will be downloaded. You can open the file with a preferred PDF reader on your personal computer or mobile device. Thank you for downloading.
+        a.download_cta(href="") Download PDF File
+        
+    // copyright footer
+    footer.copyright_footer
+      .copyright_footer_wrap
+        span Copyright &copy; The Amsterdam Post. All rights reserved.
+    
+    // sign up modal
+    include ../../includes/sign_up_modal.pug
+    
+    // scripts
+    script(type="text/javascript", src="/js/jquery-3.2.1.min.js")
+    script(type="text/javascript", src="/js/app.js")
