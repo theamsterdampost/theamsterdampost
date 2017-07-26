@@ -837,14 +837,25 @@ footer.copyright_footer {
   background: #555555;
   color: #DDDDDD;
   font-size: 16px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: flex-left;
+  -webkit-justify-content: flex-left;
+  -ms-flex-pack: flex-left;
+  justify-content: flex-left;
 }
 
 footer.copyright_footer .copyright_footer_wrap {
-  height: 100px;
   max-width: 500px;
   margin: 0 auto;
-  line-height: 100px;
   padding: 0 40px;
+  line-height: 1.6;
 }
 
 section.home_issues article.introduction {
