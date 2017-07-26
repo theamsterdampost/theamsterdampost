@@ -40,4 +40,10 @@ prepros-6.config
 .sass-cache/
 *.css.map
 
+### CNAME ###
+CNAME
+
+### .GITATTRIBUTES ###
+.gitattributes
+
 # End of https://www.gitignore.io/api/git,sass,macos,prepros
